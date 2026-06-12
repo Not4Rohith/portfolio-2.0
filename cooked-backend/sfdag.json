@@ -1,0 +1,106 @@
+{
+  "is_playing": true,
+  "timestamp": 1781014463277,
+  "context": null,
+  "progress_ms": 90900,
+  "item": {
+    "album": {
+      "album_type": "single",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5WqZHtRzOmKc1hWYfNoo8n"
+          },
+          "href": "https://api.spotify.com/v1/artists/5WqZHtRzOmKc1hWYfNoo8n",
+          "id": "5WqZHtRzOmKc1hWYfNoo8n",
+          "name": "TOKYOPHILE",
+          "type": "artist",
+          "uri": "spotify:artist:5WqZHtRzOmKc1hWYfNoo8n"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2sQHo73pQF1OTq3lDuQhlO"
+          },
+          "href": "https://api.spotify.com/v1/artists/2sQHo73pQF1OTq3lDuQhlO",
+          "id": "2sQHo73pQF1OTq3lDuQhlO",
+          "name": "Mc Pogba",
+          "type": "artist",
+          "uri": "spotify:artist:2sQHo73pQF1OTq3lDuQhlO"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5tod76GzFMGREffztRiLyJ"
+      },
+      "href": "https://api.spotify.com/v1/albums/5tod76GzFMGREffztRiLyJ",
+      "id": "5tod76GzFMGREffztRiLyJ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2739191746e87ed7b5decedbc07",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e029191746e87ed7b5decedbc07",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048519191746e87ed7b5decedbc07",
+          "width": 64
+        }
+      ],
+      "name": "Montagem Lunar Celestia 1.0 (SLOWED)",
+      "release_date": "2024-10-14",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "type": "album",
+      "uri": "spotify:album:5tod76GzFMGREffztRiLyJ"
+    },
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/5WqZHtRzOmKc1hWYfNoo8n"
+        },
+        "href": "https://api.spotify.com/v1/artists/5WqZHtRzOmKc1hWYfNoo8n",
+        "id": "5WqZHtRzOmKc1hWYfNoo8n",
+        "name": "TOKYOPHILE",
+        "type": "artist",
+        "uri": "spotify:artist:5WqZHtRzOmKc1hWYfNoo8n"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2sQHo73pQF1OTq3lDuQhlO"
+        },
+        "href": "https://api.spotify.com/v1/artists/2sQHo73pQF1OTq3lDuQhlO",
+        "id": "2sQHo73pQF1OTq3lDuQhlO",
+        "name": "Mc Pogba",
+        "type": "artist",
+        "uri": "spotify:artist:2sQHo73pQF1OTq3lDuQhlO"
+      }
+    ],
+    "disc_number": 1,
+    "duration_ms": 96254,
+    "explicit": false,
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/7IVstMaDl2HaByG8JmR2yr"
+    },
+    "href": "https://api.spotify.com/v1/tracks/7IVstMaDl2HaByG8JmR2yr",
+    "id": "7IVstMaDl2HaByG8JmR2yr",
+    "is_local": false,
+    "name": "Montagem Lunar Celestia 1.0 (SLOWED)",
+    "preview_url": null,
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:7IVstMaDl2HaByG8JmR2yr"
+  },
+  "currently_playing_type": "track",
+  "actions": {
+    "disallows": {
+      "resuming": true,
+      "toggling_repeat_context": true,
+      "toggling_repeat_track": true,
+      "toggling_shuffle": true
+    }
+  }
+}
