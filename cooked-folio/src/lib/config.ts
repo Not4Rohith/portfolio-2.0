@@ -71,7 +71,7 @@ export const CURRENTLY_WATCHING = [
 ];
 
 // External Links
-export const RESUME_URL = "https://drive.google.com/file/d/1Z6zdLjZswitzwdo2YeJ8Bmhq2F06P2gR/view?usp=drivesdk";
+export const RESUME_URL = "https://drive.google.com/file/d/1zfHWDxAo1YPMLjSErM6Zzq4Apaud-BlR/view?usp=sharing";
 export const DISCORD_LINK = "https://discord.gg/CDAKZrbHGz";
 export const CAL_URL = "https://cal.com/rohith-k3zubv/15min";
 
