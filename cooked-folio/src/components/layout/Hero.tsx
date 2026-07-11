@@ -64,8 +64,8 @@ export function Hero() {
           <nav className="flex items-center gap-4 text-sm">
             <nav className="flex items-center gap-4 text-sm">
               {[
-                    { label: "/Any thoughts?", path: "/contact" },
-                    { label: "/contacts", path: "#footer" }
+                    { label: "/Any thoughts?  ", path: "/contact" },
+                    { label: " /contacts", path: "#footer" }
                 ].map((item) => (
                     <motion.span key={item.label} whileTap={{ scale: 0.95 }}>
                       <Link
