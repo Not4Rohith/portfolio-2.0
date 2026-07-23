@@ -71,7 +71,7 @@ export const CURRENTLY_WATCHING = [
 ];
 
 // External Links
-export const RESUME_URL = "https://drive.google.com/file/d/1zfHWDxAo1YPMLjSErM6Zzq4Apaud-BlR/view?usp=sharing";
+export const RESUME_URL = "https://drive.google.com/file/d/1wEMP9EcwoZhaZAcRCA9qhSelxtdEb8Av/view?usp=drive_link";
 export const DISCORD_LINK = "https://discord.gg/CDAKZrbHGz";
 export const CAL_URL = "https://cal.com/rohith-k3zubv/15min";
 
@@ -114,15 +114,15 @@ export const SOCIALS = [
 export const STACK = [
   { name: "C++", icon: SiCplusplus, color: "#00b3ffff" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "Python", icon: SiPython, color: "#706bd6ff"},
   { name: "FastAPI", icon: SiFastapi, color: "#31f1c7ff"},
-  // { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  // { name: "React", icon: SiReact, color: "#61DAFB" },
+  { name: "React", icon: SiReact, color: "#61DAFB" },
   // { name: "React Native", icon: SiReact, color: "#61DAFB" },
   // { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
   { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
-  // { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  // { name: "Express", icon: SiExpress, color: "#FFFFFF" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "Express", icon: SiExpress, color: "#FFFFFF" },
   { name: "Git", icon: SiGit, color: "#F05032" },
   { name: "Linux", icon: SiLinux },
   
@@ -134,6 +134,13 @@ export const STACK = [
 // =================================================================================
 
 export const EXPERIENCE: ExperienceItem[] = [
+  {
+    company: "IIT Ropar Vicharanshala Lab",
+    role: "Software Engineering Intern",
+    date: "july 2026 - sept 2026",
+    description: "Open source project contribution with peer collaboration",
+    logo: "/images/companies/vicharanshala.png", 
+  },
   {
     company: "Chinmaya College",
     role: "Volunteer",
