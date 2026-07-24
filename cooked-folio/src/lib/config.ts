@@ -67,6 +67,12 @@ export const CURRENTLY_WATCHING = [
     image: "/watching/lotm.png",
     link: "https://www.google.com/search?q=Lord+of+Mysteries&sxsrf=ANbL-n4JwvJKRrNlmfBYJa-mdp8BmV226A%3A1781251461799",
   },
+  {
+    title: "Mushoku Tensei",
+    image: "/watching/MT.png",
+    link: "...",
+  },
+
 
 ];
 
