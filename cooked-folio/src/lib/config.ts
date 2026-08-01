@@ -148,7 +148,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     company: "IIT Ropar Vicharanashala Lab",
     role: "Software Engineering Intern",
-    date: "july 2026 - sept 2026",
+    date: "July 2026 - Sept 2026",
     description: "Open source project contribution with peer collaboration",
     logo: "/images/companies/vicharanshala.png", 
   },
