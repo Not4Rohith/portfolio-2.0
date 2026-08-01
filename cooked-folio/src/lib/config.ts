@@ -72,6 +72,11 @@ export const CURRENTLY_WATCHING = [
     image: "/watching/MT.png",
     link: "...",
   },
+  {
+    title: "Game of Thrones",
+    image: "/watching/got.png",
+    link: "...",
+  },
 
 
 ];
