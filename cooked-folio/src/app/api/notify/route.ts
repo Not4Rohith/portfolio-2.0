@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     const geoResponse = await fetch(`https://ipapi.co/${ip}/json/`);
     const geoData = await geoResponse.json();
     
-    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL2;
     if (!webhookUrl) return NextResponse.json({ error: 'No webhook URL' }, { status: 500 });
 
     // 5. Construct the ultra-detailed (but server-side) message
