@@ -16,7 +16,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL1;
     if (!webhookUrl) {
       return NextResponse.json(
         { error: "server misconfigured" },
