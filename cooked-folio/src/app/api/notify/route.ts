@@ -3,18 +3,28 @@ import { userAgent } from 'next/server';
 
 export async function POST(req: NextRequest) {
   try {
-    // 1. Get IP directly from Vercel headers
+    // 1. Get the TRUE referrer from the frontend payload
+    const body = await req.json().catch(() => ({}));
+    let referer = body.referrer;
+    
+    // Clean up the referrer display for Discord
+    if (!referer) {
+      referer = 'Direct Visit (Typed in URL)';
+    } else if (referer.includes('rohith-n-r-portfolio.vercel.app')) {
+      referer = 'Internal Navigation / Refresh';
+    }
+
+    // 2. Get IP from Vercel headers
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('x-real-ip') || 'Unknown IP';
     
-    // 2. Use VERCEL'S NATIVE Geolocation headers (No 3rd party API needed!)
-    const city = req.headers.get('x-vercel-ip-city') || 'Unknown City';
+    // 3. Use Vercel's native headers for location
+    const vCity = req.headers.get('x-vercel-ip-city');
+    const city = vCity ? decodeURIComponent(vCity) : 'Unknown City'; 
     const region = req.headers.get('x-vercel-ip-country-region') || 'Unknown Region';
     const country = req.headers.get('x-vercel-ip-country') || 'Unknown Country';
 
-    // 3. Grab the Referer and User-Agent
-    const referer = req.headers.get('referer') || 'Direct Visit';
+    // 4. Grab User-Agent from Next.js helper
     const { device, browser, os } = userAgent(req);
-    
     const deviceInfo = [
       os.name ? `${os.name} ${os.version || ''}` : 'Unknown OS',
       browser.name ? `${browser.name} ${browser.version || ''}` : 'Unknown Browser',
@@ -22,9 +32,9 @@ export async function POST(req: NextRequest) {
     ].join(' • ');
 
     const webhookUrl = process.env.DISCORD_WEBHOOK_URL2;
-    if (!webhookUrl) return NextResponse.json({ error: 'No webhook URL' }, { status: 500 });
+    if (!webhookUrl) return NextResponse.json({ error: 'Webhook URL not configured' }, { status: 500 });
 
-    // 4. Construct the message
+    // 5. Construct the message (ISP removed, keeping it lean)
     const message = {
       content: `👀 **New Portfolio Visitor!**`,
       embeds: [{
@@ -40,7 +50,7 @@ export async function POST(req: NextRequest) {
       }]
     };
 
-    // 5. Send to Discord
+    // 6. Ping Discord
     await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
