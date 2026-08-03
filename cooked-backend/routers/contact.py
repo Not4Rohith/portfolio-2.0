@@ -7,13 +7,13 @@ import httpx
 router=APIRouter()
 load_dotenv()
 
-DISCORD_WEBHOOK_URL=str(os.getenv("DISCORD_WEBHOOK_URL"))
+DISCORD_WEBHOOK_URL1=str(os.getenv("DISCORD_WEBHOOK_URL1"))
 
 async def discord_notif(name:str, email:str, message:str):
     discord_send={"content":f"**new message**\n**name:** {name}\n**email:**{email}\n**message:**{message}"}
     
     async with httpx.AsyncClient() as client:
-        await client.post(DISCORD_WEBHOOK_URL, json=discord_send)
+        await client.post(DISCORD_WEBHOOK_URL1, json=discord_send)
 
     
 
