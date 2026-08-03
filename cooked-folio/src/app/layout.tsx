@@ -6,6 +6,7 @@ import { constructMetadata } from "@/lib/site-config";
 import { GeistMono } from "geist/font/mono";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next"
+import VisitorTracker from '@/components/common/VisitorTracker';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -31,6 +32,8 @@ export default function RootLayout({
       <body
         className={`${GeistMono.className} bg-background text-foreground antialiased selection:bg-primary/20`}
       >
+        <VisitorTracker />
+        
         <Providers>
           <InitialSplash>{children}</InitialSplash>
         </Providers>

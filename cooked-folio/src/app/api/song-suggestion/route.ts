@@ -94,10 +94,10 @@ export async function POST(request: Request) {
       );
     }
 
-    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL1;
 
     if (!webhookUrl) {
-      console.error("DISCORD_WEBHOOK_URL not configured");
+      console.error("DISCORD_WEBHOOK_URL1 not configured");
       return NextResponse.json(
         { error: "webhook not configured" },
         { status: 500 }
