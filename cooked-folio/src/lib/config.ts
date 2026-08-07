@@ -58,9 +58,9 @@ export interface ProjectItem {
 // ======================================
 export const CURRENTLY_WATCHING = [
   {
-    title: "Modern Family",
-    image: "/watching/modernFamily.png",
-    link: "https://www.google.com/search?q=modern+family&ie=UTF-8",
+    title: "loki",
+    image: "/watching/loki.png",
+    link: "....",
   },
   {
     title: "Lord of the mysteries",
