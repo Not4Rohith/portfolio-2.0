@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 const LEETCODE_API = "https://leetcode.com/graphql";
 
+// Updated query to include tagProblemCounts
 const query = `
 query userProfile($username: String!) {
   matchedUser(username: $username) {
@@ -15,6 +16,24 @@ query userProfile($username: String!) {
       acSubmissionNum {
         difficulty
         count
+      }
+    }
+
+    tagProblemCounts {
+      advanced {
+        tagName
+        tagSlug
+        problemsSolved
+      }
+      intermediate {
+        tagName
+        tagSlug
+        problemsSolved
+      }
+      fundamental {
+        tagName
+        tagSlug
+        problemsSolved
       }
     }
   }
