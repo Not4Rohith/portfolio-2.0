@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
 
     // 5. Construct the message (ISP removed, keeping it lean)
     const message = {
-      content: `👀 **New Portfolio Visitor!**`,
+      content: `Check this out...`,
       embeds: [{
         title: `Visitor Insights`,
         color: 5814783,
