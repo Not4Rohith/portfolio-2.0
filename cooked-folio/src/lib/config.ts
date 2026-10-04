@@ -82,7 +82,7 @@ export const CURRENTLY_WATCHING = [
 ];
 
 // External Links
-export const RESUME_URL = "https://drive.google.com/file/d/1wEMP9EcwoZhaZAcRCA9qhSelxtdEb8Av/view?usp=drive_link";
+export const RESUME_URL = "https://drive.google.com/file/d/14QKkoRzzfkroOCm6gGNS0TCAqibVSQIy/view?usp=drivesdk";
 export const DISCORD_LINK = "https://discord.gg/CDAKZrbHGz";
 export const CAL_URL = "https://cal.com/rohith-k3zubv/15min";
 
@@ -148,7 +148,7 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     company: "IIT Ropar Vicharanashala Lab",
     role: "Software Engineering Intern",
-    date: "July 2026 - Sept 2026",
+    date: "July 2026 - Oct 2026",
     description: "Open source project contribution with peer collaboration",
     logo: "/images/companies/vicharanshala.png", 
   },
@@ -186,6 +186,13 @@ export const PROJECTS: ProjectItem[] = [
     tagline: "Helps hostel students in their KCET prep.",
     url: "https://exam-engine-mock-test-generator-for.vercel.app/",
     repo: "https://github.com/Not4Rohith/Exam-Engine-mock-test-generator-for-hostel-students-",
+    image: "/avatar/examEngine.png",
+  },
+  {
+    name: "BYOK-Based Personal AI Task Assistant",
+    tagline: "Your personal AI manager to plan your tasks",
+    url: "",
+    repo: "https://github.com/Not4Rohith/BYOK-based-AI-Assistant",
     image: "/avatar/examEngine.png",
   },
   
