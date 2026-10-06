@@ -181,18 +181,19 @@ export const EDUCATION: EducationItem[] = [
 // =================================================================================
 
 export const PROJECTS: ProjectItem[] = [
-   {
+   
+  {
+    name: "BYOK-Based Personal AI Task Assistant",
+    tagline: "Your personal AI manager to plan your tasks",
+    url: "https://github.com/Not4Rohith/BYOK-based-AI-Assistant",
+    repo: "https://github.com/Not4Rohith/BYOK-based-AI-Assistant",
+    image: "/avatar/googleTask.png",
+  },
+  {
     name: "Exam-Engine",
     tagline: "Helps hostel students in their KCET prep.",
     url: "https://exam-engine-mock-test-generator-for.vercel.app/",
     repo: "https://github.com/Not4Rohith/Exam-Engine-mock-test-generator-for-hostel-students-",
-    image: "/avatar/examEngine.png",
-  },
-  {
-    name: "BYOK-Based Personal AI Task Assistant",
-    tagline: "Your personal AI manager to plan your tasks",
-    url: "",
-    repo: "https://github.com/Not4Rohith/BYOK-based-AI-Assistant",
     image: "/avatar/examEngine.png",
   },
   
