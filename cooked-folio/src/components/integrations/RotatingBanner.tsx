@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface RotatingBannerProps {
@@ -11,9 +11,7 @@ interface RotatingBannerProps {
   }[];
 }
 
-export default function RotatingBanner({
-  items,
-}: RotatingBannerProps) {
+export default function RotatingBanner({ items }: RotatingBannerProps) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -24,43 +22,48 @@ export default function RotatingBanner({
     return () => clearInterval(timer);
   }, [items.length]);
 
-  const current = items[index];
-
   return (
-    <div className="absolute inset-0 ">
-      <AnimatePresence mode="wait">
-        <motion.div 
-          key={current.title}
+    <div className="absolute inset-0 bg-black">
+      {/* 1. Map through ALL images to keep them in the DOM for preloading */}
+      {items.map((item, i) => (
+        <motion.div
+          key={item.title}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          animate={{ opacity: i === index ? 1 : 0 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0 "
+          className="absolute inset-0"
+          // Prevent hidden images from capturing clicks
+          style={{ pointerEvents: i === index ? "auto" : "none" }} 
         >
           <Image
-            src={current.image}
-            alt={current.title}
+            src={item.image}
+            alt={item.title}
             fill
-            priority
+            // 2. Only prioritize the very first image for performance
+            priority={i === 0} 
             className="object-cover"
           />
         </motion.div>
-      </AnimatePresence>
+      ))}
 
       {/* dark overlay */}
-      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-black/35 z-10" />
 
       {/* title overlay */}
       <div className="absolute bottom-4 right-4 z-20">
-        
-        <p className="text-xs uppercase tracking-widest text-white/35 font-mono text-right">
-          {current.title}
-        </p>
-        
-
-        {/* <h2 className="text-xl md:text-3xl font-bold text-white text-right">
-          
-        </h2> */}
+        {/* 3. We can still use AnimatePresence for the text so it transitions smoothly */}
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={items[index].title}
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.3 }}
+            className="text-xs uppercase tracking-widest text-white/35 font-mono text-right"
+          >
+            {items[index].title}
+          </motion.p>
+        </AnimatePresence>
       </div>
     </div>
   );
