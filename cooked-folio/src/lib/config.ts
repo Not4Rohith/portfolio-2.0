@@ -31,6 +31,7 @@ export interface ExperienceItem {
   date: string;
   description: string;
   logo: string;
+  proofs?: string[];
 }
 
 export interface EducationItem {
@@ -150,16 +151,33 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: "Software Engineering Intern",
     date: "July 2026 - Oct 2026",
     description: "Open source project contribution with peer collaboration",
-    logo: "/images/companies/vicharanshala.png", 
+    logo: "/images/companies/vicharanshala.png",
+    proofs: [
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-1.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-2.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-3.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-4.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-5.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-6.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-7.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-8.png",
+      "/Exp_proofs/Rohith_N_R_Scorecard_final-9.png",
+    ],
   },
   {
     company: "Chinmaya College",
     role: "Volunteer",
     date: "2025 - Present",
     description: "Testing 'Exam Engine' project to help students",
-    logo: "/images/companies/Chinmaya.png", 
+    logo: "/images/companies/Chinmaya.png",
+    proofs: [
+      "/Exp_proofs/IMG-20260904-WA0057.jpg",
+      "/Exp_proofs/IMG-20260912-WA0084(1).jpg",
+      "/Exp_proofs/IMG-20260314-WA0097(1).jpg",
+      "/Exp_proofs/IMG-20260701-WA0007(1).jpg",
+    ],
   },
-  
+
 ];
 
 // =================================================================================
