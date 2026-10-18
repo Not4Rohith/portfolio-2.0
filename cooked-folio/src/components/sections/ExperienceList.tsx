@@ -55,16 +55,17 @@ export function ExperienceList() {
                 job.proofs?.length ? "hover:bg-primary/[0.03]" : "hover:bg-transparent"
               )}
             >
-              {job.proofs?.length && (
-                <div className="absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center text-[10px] text-primary text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 ease-out pointer-events-none">
-                  <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6" />
-                </div>
-              )}
+              
               <div className="text-xs font-mono text-muted-foreground pt-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
                 {job.date}
               </div>
 
               <div className="flex flex-col gap-2">
+                {job.proofs?.length && (
+                <div className="absolute top-6 -right-0 w-5 h-5 flex items-center justify-center text-[10px] text-primary text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 ease-out pointer-events-none">
+                  <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6" />
+                </div>
+              )}
                 <h3 className="font-medium text-foreground text-sm md:text-base flex flex-wrap items-center gap-x-2">
                   <span>{job.role}</span>
                   <span className="text-muted-foreground text-xs">at</span>
