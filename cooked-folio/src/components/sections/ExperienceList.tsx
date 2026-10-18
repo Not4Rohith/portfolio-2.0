@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { ExperienceProofCard } from "./ExperienceProofCard";
+import { ArrowUpRight} from "lucide-react";
 
 export function ExperienceList() {
   const [isProofOpen, setIsProofOpen] = useState(false);
@@ -56,7 +57,7 @@ export function ExperienceList() {
             >
               {job.proofs?.length && (
                 <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-[10px] text-primary transition-opacity group-hover:opacity-100 opacity-70">
-                  📷
+                  <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
               )}
               <div className="text-xs font-mono text-muted-foreground pt-1.5 opacity-60 group-hover:opacity-100 transition-opacity">
